@@ -1,15 +1,23 @@
 
-def main():
-    #recolte porte monnaie
-    monnaie = int(input("Entrer valeur porte monnaie"))
-    #creation du produits avec sa valeur
-    product = int(input("Entrer valeur du produit"))
-    #afficher la valeur du porte monnaie
-    result = (product - monnaie)
-    monnaie = result
-    print("La valeur du porte monnaie est de " + str(monnaie))
+#systeme place cinéma
+
+#recolter l'age de la personne
+age = int(input("Quel age avez vous ?"))
+
+#si la personne est mineur
+if age < 18:
+    price = 7
+else:
+    price = 12
+
+#requete pop corn
+pop_corn_request = input("Souhaitez-vous du pop corn ? (oui, non)")
+
+#si oui
+if pop_corn_request == "oui":
+    price += 5
+print("Vous devez payer ", price, " euros")
 
 
 
-if __name__ == '__main__':
-    main()
+
