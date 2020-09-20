@@ -1,16 +1,14 @@
-#transformer cette chaine en liste
-word = chained_words.split("-")
-print(word)
+import os
+import shutil
 
-#la melanger
-shuffle(word)
+source = "../logo_test.png"
+target = "../images/logo_test.png"
 
-#récuperer le nombre d'elements
-word_len = len(word)
-print(word_len)
+#copier coller un fichier
+shutil.copy(source, target)
 
-#si le nombre d'éléments de cette lsute est inférireur
-if word_len < 10:
-    print(word[0], word[1])
-else:
-    print(word[word_len -1], word[word_len -2], word[word_len -3],)
+#Supression du fichier
+os.remove(source)
+
+
+
